@@ -118,11 +118,26 @@ class ConversionTest(unittest.TestCase):
         expected = 226.85
         self.assertEqual(result, expected)
 
+    def test_convertKelvintoFahrenheit(self):
+        
+        result = convertKelvintoFahrenheit(0)
+        expected = -459.67
+        self.assertEqual(result, expected)
 
-    def test_convert(self):
-        celsius = 0
-        result = convert("Celsius", "Kelvin", celsius)
-        expected = 273.15
+        result = convertKelvintoFahrenheit(100)
+        expected = -279.67
+        self.assertEqual(result, expected)
+
+        result = convertKelvintoFahrenheit(200)
+        expected = -99.67
+        self.assertEqual(result, expected)
+
+        result = convertKelvintoFahrenheit(300)
+        expected = 80.33
+        self.assertEqual(result, expected)
+
+        result = convertKelvintoFahrenheit(500)
+        expected = 440.33
         self.assertEqual(result, expected)
 
 
