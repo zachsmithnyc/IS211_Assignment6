@@ -3,15 +3,19 @@ _ZERO_C_IN_KELVIN = 273.15
 
 
 def convertCelsiusToKelvin(celsius):
-    """Takes in a float representing a Celsius measurement, and returns that temperature converted into Kelvins"""
-    kelvins = celsius + 273.15
+    """
+    Takes in a float representing a Celsius measurement
+    returns that temperature converted into Kelvin
+    """
+    kelvin = celsius + 273.15
 
-    return kelvins
+    return kelvin
 
 
 def convertCelsiusToFahrenheit(celsius):
     """
-    Takes in a float representing a Celsius measurement, and returns that temperature converted into Fahrenheit
+    Takes in a float representing a Celsius measurement
+    returns that temperature converted into Fahrenheit
     """
     fahrenheit = celsius * 9/5 + 32
 
@@ -20,38 +24,42 @@ def convertCelsiusToFahrenheit(celsius):
 
 def convertFahrenheitToCelsius(fahrenheit):
     """
-    Takes in a float representing a Celsius measurement, and returns that temperature converted into Fahrenheit
+    Takes in a float representing a fahrenheit measurement
+    returns that temperature converted into celsius
     """
-    result = (fahrenheit - 32) * 5/9
+    celsius = (fahrenheit - 32) * 5/9
 
-    return result
+    return celsius
 
 
 def convertFahrenheitToKelvin(fahrenheit):
     """
-    Takes in a float representing a Celsius measurement, and returns that temperature converted into Fahrenheit
+    Takes in a float representing a Fahrenheit measurement
+    returns that temperature converted into Kelvin
     """
-    result = 0
+    kelvin = (fahrenheit + 459.67) * 5/9
 
-    return result
+    return kelvin
 
 
 def convertKelvinToCelsius(kelvin):
     """
-    Takes in a float representing a Celsius measurement, and returns that temperature converted into Fahrenheit
+    Takes in a float representing a Kelvin measurement
+    and returns that temperature converted into Celsius
     """
-    result = 0
+    celsius = (kelvin + 273.15)
 
-    return result
+    return celsius
 
 
 def convertKelvintoFahrenheit(kelvin):
     """
-    Takes in a float representing a Celsius measurement, and returns that temperature converted into Fahrenheit
+    Takes in a float representing a Kelvin measurement
+    returns that temperature converted into Fahrenheit
     """
-    result = 0
+    fahrenheit = (kelvin * 9/5 - 459.67)
 
-    return result
+    return fahrenheit
 
 
 def converMilesToMeters(miles):
