@@ -140,6 +140,28 @@ class ConversionTest(unittest.TestCase):
         expected = 440.33
         self.assertEqual(result, expected)
 
+    def test_convertMilesToMeters(self):
+        
+        result = convertMilesToMeters(1)
+        expected = 1609.34
+        self.assertEqual(result, expected)
+
+        result = convertMilesToMeters(15)
+        expected = 24140.2
+        self.assertEqual(result, expected)
+
+        result = convertMilesToMeters(30)
+        expected = 48280.3
+        self.assertEqual(result, expected)
+
+        result = convertMilesToMeters(2)
+        expected = 3218.69
+        self.assertAlmostEqual(result, expected)
+
+        result = convertMilesToMeters(500)
+        expected = 804672
+        self.assertEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

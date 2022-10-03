@@ -1,7 +1,7 @@
 
 _ZERO_C_IN_KELVIN = 273.15
 
-
+#convert temperature
 def convertCelsiusToKelvin(celsius):
     """
     Takes in a float representing a Celsius measurement
@@ -61,9 +61,39 @@ def convertKelvintoFahrenheit(kelvin):
 
     return fahrenheit
 
-
-def converMilesToMeters(miles):
+#convert length 
+def convertMilesToMeters(miles):
     """Convert Miles to Meters"""
-    result = 0
+    meters = miles * 1609.34
 
-    return result
+    return meters 
+
+def convertMilesToYards(miles):
+    """Convert Miles to Yards"""
+    yards = miles * 1760
+
+    return yards
+
+def convertMetersToMiles(meters):
+    """Convert Meters to Miles"""
+    miles = meters / 1609.34
+
+    return miles
+
+def convertMetersToYards(meters):
+    """Convert Meters to Yardss"""
+    yards = meters * 1.09361
+
+    return yards
+
+def convertYardsToMeters(yards):
+    """Convert Yardss to Meters"""
+    meters = yards / 1.09361
+
+    return meters
+
+def convertYardsToMiles(yards):
+    """Convert Yards to Miles"""
+    miles = yards / 1760
+
+    return miles
