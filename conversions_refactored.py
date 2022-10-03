@@ -13,4 +13,4 @@ def convert(from_units, to_units, value):
         return convertCelsiusToFahrenheit(value)
     # ...
     elif from_lcase == "miles" and to_lcase == "meters":
-        return converMilesToMeters(value)
+        return convertMilesToMeters(value)
