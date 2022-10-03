@@ -47,7 +47,7 @@ def convertKelvinToCelsius(kelvin):
     Takes in a float representing a Kelvin measurement
     and returns that temperature converted into Celsius
     """
-    celsius = (kelvin + 273.15)
+    celsius = (kelvin - 273.15)
 
     return celsius
 
