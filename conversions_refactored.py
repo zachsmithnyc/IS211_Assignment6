@@ -1,5 +1,7 @@
 from conversions import *
 
+class ConversionNotPossible(Exception):
+    pass
 
 def convert(from_units, to_units, value):
 
@@ -33,3 +35,8 @@ def convert(from_units, to_units, value):
         return convertYardsToMiles(value)
     elif from_lcase == "yards" and to_lcase == "meters":
         return convertYardsToMeters(value)
+
+    if from_lcase == to_lcase:
+        raise ConversionNotPossible
+
+
