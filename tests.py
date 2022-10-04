@@ -273,11 +273,61 @@ class ConversionTest(unittest.TestCase):
         self.assertAlmostEqual(result, expected, places=4)
 
 
+    def testconvert(self):
+        celsius = 0
+        result = convert("Celsius", "Kelvin", celsius)
+        expected = 273.15
+        self.assertEqual(result, expected)
 
+        celsius = 0
+        result = convert("Celsius", "Fahrenheit", celsius)
+        expected = 32
+        self.assertEqual(result, expected)
 
+        fahrenheit = 32
+        result = convert("Fahrenheit", "Celsius", fahrenheit)
+        expected = 0
+        self.assertEqual(result, expected)
 
+        fahrenheit = 32
+        result = convert("Fahrenheit", "Kelvin", fahrenheit)
+        expected = 273.15
+        self.assertEqual(result, expected)
 
+        kelvin = 273.15
+        result = convert("Kelvin", "Fahrenheit", kelvin)
+        expected = 32
+        self.assertEqual(result, expected)
 
+        kelvin = 273.15
+        result = convert("Kelvin", "Celsius", kelvin)
+        expected = 0
+        self.assertEqual(result, expected)
+
+        miles = 1
+        result = convert("Miles", "Meters", miles)
+        expected = 1609.34
+        self.assertEqual(result, expected)
+
+        miles = 1
+        result = convert("Miles", "Yards", miles)
+        expected = 1760
+        self.assertEqual(result, expected)
+
+        meters = 1609.34
+        result = convert("Meters", "Miles", meters)
+        expected = 1
+        self.assertEqual(result, expected)
+
+        meters = 1609.34
+        result = convert("Meters", "Yards", meters)
+        expected = 1759.9903173999
+        self.assertAlmostEqual(result, expected, places=5)
+
+        yards = 1760
+        result = convert("Yards", "Miles", yards)
+        expected = 1
+        self.assertEqual(result, expected)
 
 
 

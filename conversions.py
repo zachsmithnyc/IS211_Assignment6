@@ -59,7 +59,7 @@ def convertKelvintoFahrenheit(kelvin):
     """
     fahrenheit = (kelvin * 9/5 - 459.67)
 
-    return fahrenheit
+    return round(fahrenheit, 2)
 
 #convert length 
 def convertMilesToMeters(miles):
@@ -87,7 +87,7 @@ def convertMetersToYards(meters):
     return yards
 
 def convertYardsToMeters(yards):
-    """Convert Yardss to Meters"""
+    """Convert Yards to Meters"""
     meters = yards / 1.094
 
     return meters
