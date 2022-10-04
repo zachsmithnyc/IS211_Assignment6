@@ -324,10 +324,15 @@ class ConversionTest(unittest.TestCase):
         expected = 1759.9903173999
         self.assertAlmostEqual(result, expected, places=5)
 
-        yards = 1760
+        yards = 5000
         result = convert("Yards", "Miles", yards)
-        expected = 1
-        self.assertEqual(result, expected)
+        expected = 2.840909
+        self.assertAlmostEqual(result, expected, places=6)
+
+        yards = 500
+        result = convert("Yards", "Meters", yards)
+        expected = 457.038391
+        self.assertAlmostEqual(result, expected, places=6)
 
 
 
