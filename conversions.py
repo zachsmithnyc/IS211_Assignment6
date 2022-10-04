@@ -88,7 +88,7 @@ def convertMetersToYards(meters):
 
 def convertYardsToMeters(yards):
     """Convert Yardss to Meters"""
-    meters = yards / 1.09361
+    meters = yards / 1.094
 
     return meters
 

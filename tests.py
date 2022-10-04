@@ -147,20 +147,143 @@ class ConversionTest(unittest.TestCase):
         self.assertEqual(result, expected)
 
         result = convertMilesToMeters(15)
-        expected = 24140.2
+        expected = 24140.1
         self.assertEqual(result, expected)
 
         result = convertMilesToMeters(30)
-        expected = 48280.3
+        expected = 48280.2
         self.assertEqual(result, expected)
 
         result = convertMilesToMeters(2)
-        expected = 3218.69
-        self.assertAlmostEqual(result, expected)
+        expected = 3218.68
+        self.assertEqual(result, expected)
 
         result = convertMilesToMeters(500)
-        expected = 804672
+        expected = 804670.0
         self.assertEqual(result, expected)
+
+    def test_convertMilestoYards(self):
+
+        result = convertMilesToYards(1)
+        expected = 1760
+        self.assertEqual(result, expected)
+
+        result = convertMilesToYards(2)
+        expected = 3520
+        self.assertEqual(result, expected)
+
+        result = convertMilesToYards(50)
+        expected = 88000
+        self.assertEqual(result, expected)
+
+        result = convertMilesToYards(100)
+        expected = 176000
+        self.assertEqual(result, expected)
+
+        result = convertMilesToYards(500)
+        expected = 880000
+        self.assertEqual(result, expected)
+
+    def test_convertMeterstoMiles(self):
+
+        result = convertMetersToMiles(1)
+        expected = 0.000621371
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertMetersToMiles(10)
+        expected = 0.00621371
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertMetersToMiles(500)
+        expected = 0.310686
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertMetersToMiles(700)
+        expected = 0.43496
+        self.assertAlmostEqual(result, expected, places=5)
+
+        result = convertMetersToMiles(2000)
+        expected = 1.242742
+        self.assertAlmostEqual(result, expected, places=5)
+
+    def test_convertMeterstoYards(self):
+
+        result = convertMetersToYards(1)
+        expected = 1.09361
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertMetersToYards(15)
+        expected = 16.4042
+        self.assertAlmostEqual(result, expected, places=4)
+
+        result = convertMetersToYards(50)
+        expected = 54.6805
+        self.assertAlmostEqual(result, expected, places=5)
+
+        result = convertMetersToYards(100)
+        expected = 109.361
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertMetersToYards(500)
+        expected = 546.805
+        self.assertAlmostEqual(result, expected, places=6)
+
+    def test_convertYardstoMiles(self):
+
+        result = convertYardsToMiles(1)
+        expected = 0.000568182
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertYardsToMiles(200)
+        expected = 0.113636
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertYardsToMiles(500)
+        expected = 0.284091
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertYardsToMiles(1000)
+        expected = 0.568182
+        self.assertAlmostEqual(result, expected, places=6)
+
+        result = convertYardsToMiles(5000)
+        expected = 2.840909
+        self.assertAlmostEqual(result, expected, places=6)
+
+    def test_convertYardstoMeters(self):
+
+        result = convertYardsToMeters(1)
+        expected = 0.91407
+        self.assertAlmostEqual(result, expected, places=4)
+
+        result = convertYardsToMeters(15)
+        expected = 13.7111517
+        self.assertAlmostEqual(result, expected, places=4)
+
+        result = convertYardsToMeters(30)
+        expected = 27.4223
+        self.assertAlmostEqual(result, expected, places=3)
+
+        result = convertYardsToMeters(100)
+        expected = 91.4076
+        self.assertAlmostEqual(result, expected, places=3)
+
+        result = convertYardsToMeters(500)
+        expected = 457.038391
+        self.assertAlmostEqual(result, expected, places=4)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
